@@ -1,0 +1,221 @@
+title: CODI 2021 Shared-Task
+description: Anaphora Resolution in Dialogues
+image: logo.jpg
+has_registration: True
+allow_teams: True
+html:
+    overview: overview.html
+    evaluation: evaluation.html
+    terms: terms_and_conditions.html
+    data: data.html
+
+phases:
+    1:
+        phasenumber: 1
+        label: "Dev - AR"
+        description: Anaphora Resolution - Train your model on official training set for Anaphora Resolution. Feel free to use external datasets or knowledge sources. Submit results on the validation data.
+        color: yellow
+        start_date: 2021-03-29
+        max_submissions: 100
+        max_submissions_per_day: 10
+        leaderboard_management_mode: default
+        scoring_program: scoring_program.zip
+        reference_data: reference_data.zip
+        phase_never_ends: True
+        # scoring_program: c4819120-18a2-4466-9c82-f51cbbe8b667
+        # reference_data: 542e4557-9170-48c5-83e2-110921bcab45
+    2:
+        phasenumber: 2
+        label: "Dev - Br"
+        description: Bridging - Train your model on official training set for Anaphora Resolution. Feel free to use external datasets or knowledge sources. Submit results on the validation data.
+        color: yellow
+        start_date: 2021-03-29
+        max_submissions: 100
+        max_submissions_per_day: 10
+        leaderboard_management_mode: default
+        scoring_program: scoring_program.zip
+        reference_data: reference_data.zip
+        phase_never_ends: True
+    3:
+        phasenumber: 3
+        label: "Dev - DD"
+        description: Discourse Deixis - Train your model on official training set for Anaphora Resolution. Feel free to use external datasets or knowledge sources. Submit results on the validation data.
+        color: yellow
+        start_date: 2021-03-29
+        max_submissions: 100
+        max_submissions_per_day: 10
+        leaderboard_management_mode: default
+        scoring_program: scoring_program.zip
+        reference_data: reference_data.zip
+        phase_never_ends: True
+    4:
+        phasenumber: 4
+        label: "Eval - AR"
+        description: Anaphora Resolution - Evaluate your model on the official test set. You can use validation set to aid with training.
+        color: green
+        start_date: 2021-06-21
+        max_submissions: 100
+        max_submissions_per_day: 10
+        leaderboard_management_mode: default
+        scoring_program: scoring_program.zip
+        reference_data: reference_data.zip
+        phase_never_ends: True
+    5:
+        phasenumber: 5
+        label: "Eval - Br (Gold)"
+        description: Bridging - Evaluate your model on the official test set using gold mentions. You can use validation set to aid with training.
+        color: green
+        start_date: 2021-06-21
+        max_submissions: 100
+        max_submissions_per_day: 10
+        leaderboard_management_mode: default
+        scoring_program: scoring_program.zip
+        reference_data: reference_data.zip
+        phase_never_ends: True
+    6:
+        phasenumber: 6
+        label: "Eval - Br (Pred)"
+        description: Bridging - Evaluate your model on the official test set using system mentions. You can use validation set to aid with training.
+        color: green
+        start_date: 2021-06-21
+        max_submissions: 100
+        max_submissions_per_day: 10
+        leaderboard_management_mode: default
+        scoring_program: scoring_program.zip
+        reference_data: reference_data.zip
+        phase_never_ends: True
+    7:
+        phasenumber: 7
+        label: "Eval - DD (Gold)"
+        description: Discourse Deixis - Evaluate your model on the official test set using gold mentions. You can use validation set to aid with training.
+        color: green
+        start_date: 2021-06-21
+        max_submissions: 100
+        max_submissions_per_day: 10
+        leaderboard_management_mode: default
+        scoring_program: scoring_program.zip
+        reference_data: reference_data.zip
+        phase_never_ends: True
+    8:
+        phasenumber: 8
+        label: "Eval - DD (Pred)"
+        description: Discourse Deixis - Evaluate your model on the official test set using system mentions. You can use validation set to aid with training.
+        color: green
+        start_date: 2021-06-21
+        max_submissions: 100
+        max_submissions_per_day: 10
+        leaderboard_management_mode: default
+        scoring_program: scoring_program.zip
+        reference_data: reference_data.zip
+        phase_never_ends: True
+    
+end_date: 2021-07-01
+
+leaderboard:
+    leaderboards:
+        ALL: &ALL
+            label: All Datasets
+            rank: 1
+    column_groups:
+        Anaphora: &AR
+            label: Anaphora Resolution (CoNLL)
+        Bridging: &Br
+            label: Bridging (Entity F1)
+        Discourse_Deixis: &DD
+            label: Discourse Deixis (CoNLL)
+    columns:
+        #anaphora conll
+        Lgt_AR:
+            leaderboard: *ALL
+            column_group: *AR
+            label: LIGHT
+            # rank: 1
+            numeric_format: 2
+        AMI_AR:
+            leaderboard: *ALL
+            column_group: *AR
+            label: AMI
+            # rank: 2
+            numeric_format: 2
+        Per_AR:
+            leaderboard: *ALL
+            column_group: *AR
+            label: Persuasion
+            # rank: 3
+            numeric_format: 2
+        Swbd_AR:
+            leaderboard: *ALL
+            column_group: *AR
+            label: Swbd
+            # rank: 4
+            numeric_format: 2
+        ARR_AR:
+            leaderboard: *ALL
+            column_group: *AR
+            label: ARRAU
+            # rank: 5
+            numeric_format: 2
+
+        # bridging
+        Lgt_Br:
+            leaderboard: *ALL
+            column_group: *Br
+            label: LIGHT
+            # rank: 1
+            numeric_format: 2
+        AMI_Br:
+            leaderboard: *ALL
+            column_group: *Br
+            label: AMI
+            # rank: 2
+            numeric_format: 2
+        Per_Br:
+            leaderboard: *ALL
+            column_group: *Br
+            label: Persuasion
+            # rank: 3
+            numeric_format: 2
+        Swbd_Br:
+            leaderboard: *ALL
+            column_group: *Br
+            label: Swbd
+            # rank: 4
+            numeric_format: 2
+        ARR_Br:
+            leaderboard: *ALL
+            column_group: *Br
+            label: ARRAU
+            # rank: 5
+            numeric_format: 2
+
+        # discourse deixis
+        Lgt_DD:
+            leaderboard: *ALL
+            column_group: *DD
+            label: LIGHT
+            # rank: 1
+            numeric_format: 2
+        AMI_DD:
+            leaderboard: *ALL
+            column_group: *DD
+            label: AMI
+            # rank: 2
+            numeric_format: 2
+        Per_DD:
+            leaderboard: *ALL
+            column_group: *DD
+            label: Persuasion
+            # rank: 3
+            numeric_format: 2
+        Swbd_DD:
+            leaderboard: *ALL
+            column_group: *DD
+            label: Swbd
+            # rank: 4
+            numeric_format: 2
+        ARR_DD:
+            leaderboard: *ALL
+            column_group: *DD
+            label: ARRAU
+            # rank: 5
+            numeric_format: 2
