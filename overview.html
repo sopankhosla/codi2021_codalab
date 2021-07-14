@@ -1,0 +1,68 @@
+<h1>Backgroud</h1>
+<p><span>Coreference and anaphora resolution is a long-studied problem in computational linguistics and NLP. Although
+		multiple benchmark datasets have been developed in recent years, the progress in this area is hindered because
+		most of these corpora often ignore the potentially difficult cases. For example, datasets like OntoNotes [1],
+		GAP [2], and LitBank [3] only focus on identity coreference and ignore relations like discourse deixis [9] or
+		bridging anaphora [10], both of which introduce interesting research challenges.</span></p>
+<p><span>Several works have shown the importance of syntax for anaphora resolution [4,5,6,7]. However, these features
+		might not generalize well to conversations where the language is often grammatically incorrect and suffers from
+		disfluencies. Apart from this, anaphora resolution in dialogues requires systems to perform speaker grounding of
+		pronouns and focus on long-term conversation structure, complexities that are often missing in news or Wikipedia
+		articles which form a large chunk of current coreference resolution state-of-the-art datasets.&nbsp;</span></p>
+<p><span>This shared-task goes above and beyond the simple cases of coreference resolution that often overestimate the
+		performance of current SOTA models on the task. The goal of this shared task is to bring together researchers
+		from disciplines like discourse analysis, dialogue systems, machine learning, and linguistics and lead to
+		advances in the area of coreference and anaphora resolution.</span></p>
+<h1>Task</h1>
+<p><span>In this shared task you will be building approaches/models for three anaphoric relations. The shared task is
+		structured into three sub-tasks. You can participate in one or more of these sub-tasks. The three sub-tasks are
+		below:</span></p>
+<ol>
+	<li>Resolution of anaphoric identity</li>
+	<li>Resolution of bridging references</li>
+	<li>Resolution of discourse deixis/abstract anaphora</li>
+</ol>
+<h1>Data</h1>
+<p><span> The details of the data provided is as shown below.</span></p>
+<ul>
+	<li>Training set: The training set will consist of annotated data for all three anaphoric relations. The data will
+		be available under separate download links.</li>
+	<li>Development set: The development set will consist of annotated data samples from different dialogic datasets
+		with all three anaphoric relations ?</li>
+	<li>Test set: The test set will be dialogue dataset from various sources.</li>
+</ul>
+<h1>Evaluations</h1>
+<p><span>For evaluating the submissions, we use the MUC, B3, CEAFE, LEA scores. Furthermore, we also compare model's
+		performance on both gold and predicted mentions to disentangle mention prediction and linking. Finally, we use
+		MINA [8] as an additional evaluation.</span></p>
+<h1>Timeline</h1>
+<ul>
+	<li>Mar 1, 2021 - Training and development data released.</li>
+	<li>June 21 - Test data released.</li>
+	<li>July 1 - Deadline for submissions on test data (Stage 1).</li>
+	<li>July 15 - System descriptions due (Stage 1).</li>
+	<li>July 20 - Error-analysis and cross-team discussions start (Stage 2).</li>
+	<li>Aug 20 - Analysis reports due (Stage 2).</li>
+	<li>Sep 15 - Accept/reject notifications.</li>
+	<li>Oct 1 - Camera-ready version due.</li>
+	<li>Nov 7-11 - EMNLP 2021.</li>
+</ul>
+<div><strong> References </strong> <br /> [1] Sameer Pradhan, Alessandro Moschitti, Nianwen Xue,Olga Uryupina, and
+	Yuchen Zhang. 2012. Conll-2012 shared task: Modeling multilingual unrestricted coreference in ontonotes. In Joint
+	Conference on EMNLP and CoNLL - Shared Task. <br /> [2] Webster, K., Recasens, M., Axelrod, V., &amp; Baldridge, J.
+	(2018). Mind the gap: A balanced corpus of gendered ambiguous pronouns. Transactions of the Association for
+	Computational Linguistics.<br /> [3] Bamman, D., Lewke, O. and Mansoor, A..An annotated dataset of coreference in
+	English literature. arXiv preprint arXiv:1912.01140. 2019.<br /> [4] J. Hobbs. Resolving pronoun references.
+	Readings in natural language processing, 1986.<br /> [5] Durrett, G. and Klein, D.. Easy victories and uphill
+	battles in coreference resolution. In Proceedings of the 2013 Conference on Empirical Methods in Natural Language
+	Processing. 2013.<br /> [6] A. Zeldes and S. Zhang. When annotation schemes change rules help: aconfigurable
+	approach to coreference resolution beyond ontonotes, CORBON 2016.<br /> [7] S. Lappin and H.J. Leass. An algorithm
+	for pronominal anaphora resolution, Comput. Linguist. 1994.<br /> [8] Moosavi, N.S., Born, L., Poesio, M. and
+	Strube, M. Using automatically extracted minimum spans to disentangle coreference evaluation from boundary
+	detection. arXiv preprint arXiv:1906.06703. 2019.<br /> [9] Webber, Bonnie. Discourse Deixis: reference to discourse
+	segments. In 26th Annual Meeting of the Association for Computational Linguistics. 1988.<br /> [10] Massimo Poesio,
+	Rahul Mehta, Axel Maroudas, and Janet Hitzeman. 2004. Learning to resolve bridging references. In Proceedings of the
+	42nd Annual Meeting of the Association for Computational Linguistics, Barcelona, Spain, 21&ndash;26 July 2004.<br />
+	[11] Poesio, Massimo, Yulia Grishina, Varada Kolhatkar, Nafise Sadat Moosavi, Ina Roesiger, Adam Roussel, Fabian
+	Simonjetz et al. "Anaphora resolution with the ARRAU corpus." In Proceedings of the First Workshop on Computational
+	Models of Reference, Anaphora and Coreference. 2018.</div>
